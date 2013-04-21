@@ -104,6 +104,7 @@ Ext.define('Suoritukset.view.Tutkinnot', {
                   }
                   showList(somethingChecked,opiskelijatStore,opiskelijaLista)
                   if(newVal == true){
+                    valitutKandit.push(cb.getValue())
                     for(var i = 0; i<opiskelijatStore.getCount();i++){
                       var opiskelija = opiskelijatStore.getAt(i);
                       opiskelija.set('kandipoints',opiskelija.get('kandipoints') + haeOpintopisteet(cb.getValue(),opiskelija.get('id')));
